@@ -1,0 +1,24 @@
+info:
+  name: Registration
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{host}}/registration"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "test@test.ru",
+        "password": "Qa1",
+        "first_name": "Ivan",
+        "last_name": "Ivanov"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
